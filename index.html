@@ -31,12 +31,14 @@
     .app-title {
       display: flex;
       justify-content: center;
+      margin: 1em 2em;
+
     }
 
     h1 {
       display: inline-block;
       margin: auto;
-      font-size: 8em;
+      font-size: 6em;
     }
 
     h2 {
@@ -47,11 +49,42 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
+      margin: 1em 2em;
     }
 
     p {
       margin: auto;
       font-size: 3em;
+    }
+
+    .board-wrapper button {
+      margin: auto;
+      width: 90%;
+      font-size: 1.5em;
+      border: 3px solid #323232;
+      border-radius: 8px;
+      background: #323232;
+      color: white;
+    }
+
+    .start-reset-wrapper {
+      margin: 2em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .start-reset-wrapper button {
+      margin: 1em;
+      width: 20%;
+      font-size: 1.5em;
+      border: 3px solid #323232;
+      border-radius: 8px;
+      background: #323232;
+      color: white;
+    }
+
+    button:hover {
+      opacity: .7;
     }
 
 
@@ -67,13 +100,13 @@
       <div class="player-one">
         <h2>Player 1</h2>
         <P id="timer1">4:00</P>
-        <button id="switchBtn1" onclick="countdown2()">Swtich</button>
+        <button id="switchBtn1" onclick="countdown2()">SWITCH</button>
       </div>
 
       <div class="player-two">
         <h2>Player 2</h2>
         <P id="timer2">4:00</P>
-        <button id="switchBtn2" onclick="countdown1()">Switch</button>
+        <button id="switchBtn2" onclick="countdown1()">SWITCH</button>
       </div> 
     </div>
 
