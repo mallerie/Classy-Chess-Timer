@@ -225,8 +225,9 @@
     }
 
     function reset() {
-      clearInterval(startTimer1, startTimer2);
-
+      clearInterval(startTimer1);
+      clearInterval(startTimer2);
+       
       secondsLeft1 = 240;
       secondsLeft2 = 240;
 
