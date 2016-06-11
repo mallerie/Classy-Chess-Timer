@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>Chess Timer</title>
   <link href='https://fonts.googleapis.com/css?family=Domine:400,700' 
         rel='stylesheet' 
         type='text/css'>
   <style type="text/css">
-    @media only screen (max-width: 680px) {
-      .media {
-        width: 90%;
-        display: block;
-        margin: .5em;
-      }
-    }
 
     * {
       margin: 0;
       padding: 0;
       font-family: 'Domine', serif;
     }
+
     body {
       background: #ccc;
     }
+
     .app {
       background-color: #fff;
       width: 90%;
@@ -46,7 +40,6 @@
 
     .info-wrapper {
       display: flex;
-      /*justify-content: center;*/
       align-items: center;
       flex-direction: column;
     }
@@ -59,6 +52,7 @@
       display: inline-block;
       margin: auto;
       font-size: 6em;
+      text-align: center;
     }
 
     h2 {
@@ -120,9 +114,9 @@
       color: blue;
     }
 
-
   </style>
 </head>
+
 <body>
   <div class="app">
     <div class="app-title">
@@ -133,49 +127,42 @@
       <h3>Player One goes first. Need to learn how to play? Click 
         <a href="https://www.chess.com/learn-how-to-play-chess">here</a>!
       </h3>
-      <img class="media" src="https://cdn3.iconfinder.com/data/icons/sport-2/100/sport_game-07-512.png">
+      <img src="https://cdn3.iconfinder.com/data/icons/sport-2/100/sport_game-07-512.png">
     </div>
 
     <div class="board-wrapper">
       <div class="player-one">
         <h2>Player 1</h2>
         <P id="timer1">4:00</P>
-        <button class="media" id="switchBtn1" onclick="countdown2()">SWITCH</button>
+        <button id="switchBtn1" 
+                onclick="countdown2()">SWITCH</button>
       </div>
 
       <div class="player-two">
         <h2>Player 2</h2>
         <P id="timer2">4:00</P>
-        <button class="media" id="switchBtn2" onclick="countdown1()">SWITCH</button>
+        <button id="switchBtn2" 
+                onclick="countdown1()">SWITCH</button>
       </div> 
     </div>
 
     <div class="start-reset-wrapper">
-      <button class="media" id="startBtn" onclick="countdown1()" onclick="reset()">Start</button>
-      <button class="media" id="resetBtn" onclick="reset()">Reset</button>
+      <button onclick="countdown1()" onclick="reset()">Start</button>
+      <button onclick="reset()">Reset</button>
     </div>
 
   </div>
 
-
-
-
-
   <script type="text/javascript">
 
-    var secondsLeft1, secondsLeft2, resetBtn, startTimer1, startTimer2;
-    var timer, mins, secs;
-    var secondsRemaining;
-    var intervalHandle;
+    var secondsLeft1, secondsLeft2, startTimer1, startTimer2;
 
     var fullClock = 240;
 
-    // secondsLeft = 240;
     secondsLeft1 = fullClock;
     secondsLeft2 = fullClock;
 
     function countdown1() {
-      console.log('countdown1');
       clearInterval(startTimer1);
       secondsLeft1--;
 
@@ -185,7 +172,6 @@
     }
 
     function count1() {
-      console.log('count1');
 
       var min = Math.floor(secondsLeft1 / 60);
       var sec = secondsLeft1 - (min * 60);
@@ -199,16 +185,15 @@
       if (secondsLeft1 === 0){
         reset();
         alert("Player Two Wins! Congratulations!");
-        clearInterval(startTimer1, startTimer2);
+        clearInterval(startTimer1);
+        clearInterval(startTimer2);
       }
 
       document.getElementById('timer1').innerHTML = message;
-      secondsLeft1--;
-      
+      secondsLeft1--; 
     } 
 
     function countdown2() {
-      console.log('countdown2');
       clearInterval(startTimer2);
       secondsLeft2--;
 
@@ -219,7 +204,6 @@
     }
 
     function count2() {
-      // secondsLeft = 240;
 
       var min = Math.floor(secondsLeft2 / 60);
       var sec = secondsLeft2 - (min * 60);
@@ -233,8 +217,8 @@
       if (secondsLeft2 === 0){
         reset();
         alert("Player One Wins! Congratulations!");
-        clearInterval(startTimer1, startTimer2);
-        
+        clearInterval(startTimer1);
+        clearInterval(startTimer2);
       }
 
       document.getElementById('timer2').innerHTML = message;
