@@ -146,7 +146,7 @@
 
   <script type="text/javascript">
 
-    var timer1, timer2, switchBtn1, switchBtn2, resetBtn, startTimer1, startTimer2;
+    var secondsLeft1, secondsLeft2, resetBtn, startTimer1, startTimer2;
     var timer, mins, secs;
     var secondsRemaining;
     var intervalHandle;
@@ -195,7 +195,7 @@
       clearInterval(startTimer2);
       secondsLeft2--;
 
-      startTimer2 = setInterval(function() {
+      startTimer1 = setInterval(function() {
         count2();
       }, 1000);
     
