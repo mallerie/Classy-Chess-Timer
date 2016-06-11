@@ -7,6 +7,14 @@
         rel='stylesheet' 
         type='text/css'>
   <style type="text/css">
+    @media only screen (max-width: 680px) {
+      .media {
+        width: 90%;
+        display: block;
+        margin: .5em;
+      }
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -18,9 +26,11 @@
     .app {
       background-color: #fff;
       width: 90%;
-      min-height: 90vh;
+      min-height: 85vh;
       margin: auto;
+      border-radius: 8px;
     }
+
 
     .board-wrapper {
       display: flex;
@@ -55,11 +65,18 @@
       font-size: 3em;
     }
 
+    h3 {
+      text-align: center;
+    }
+
     .player-one, .player-two {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      margin: 1em 2em;
+      padding: 1em 2em;
+      margin: 1em;
+      background: #e5e5e5;
+      border-radius: 8px;
     }
 
     p {
@@ -116,26 +133,26 @@
       <h3>Player One goes first. Need to learn how to play? Click 
         <a href="https://www.chess.com/learn-how-to-play-chess">here</a>!
       </h3>
-      <img src="https://cdn3.iconfinder.com/data/icons/sport-2/100/sport_game-07-512.png">
+      <img class="media" src="https://cdn3.iconfinder.com/data/icons/sport-2/100/sport_game-07-512.png">
     </div>
 
     <div class="board-wrapper">
       <div class="player-one">
         <h2>Player 1</h2>
         <P id="timer1">4:00</P>
-        <button id="switchBtn1" onclick="countdown2()">SWITCH</button>
+        <button class="media" id="switchBtn1" onclick="countdown2()">SWITCH</button>
       </div>
 
       <div class="player-two">
         <h2>Player 2</h2>
         <P id="timer2">4:00</P>
-        <button id="switchBtn2" onclick="countdown1()">SWITCH</button>
+        <button class="media" id="switchBtn2" onclick="countdown1()">SWITCH</button>
       </div> 
     </div>
 
     <div class="start-reset-wrapper">
-      <button id="startBtn" onclick="countdown1()" onclick="reset()">Start</button>
-      <button id="resetBtn" onclick="reset()">Reset</button>
+      <button class="media" id="startBtn" onclick="countdown1()" onclick="reset()">Start</button>
+      <button class="media" id="resetBtn" onclick="reset()">Reset</button>
     </div>
 
   </div>
