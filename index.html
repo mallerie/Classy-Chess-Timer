@@ -16,7 +16,7 @@
       background: #ccc;
     }
     .app {
-      background-color: #eee;
+      background-color: #fff;
       width: 90%;
       min-height: 90vh;
       margin: auto;
@@ -31,8 +31,18 @@
     .app-title {
       display: flex;
       justify-content: center;
-      margin: 1em 2em;
+      margin: .5em 1em;
+    }
 
+    .info-wrapper {
+      display: flex;
+      /*justify-content: center;*/
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .info-wrapper img {
+      width: 20%;
     }
 
     h1 {
@@ -42,7 +52,7 @@
     }
 
     h2 {
-      font-size: 4em;
+      font-size: 3em;
     }
 
     .player-one, .player-two {
@@ -85,6 +95,12 @@
 
     button:hover {
       opacity: .7;
+      background: none;
+      color: #323232;
+    }
+
+    a {
+      color: blue;
     }
 
 
@@ -94,6 +110,13 @@
   <div class="app">
     <div class="app-title">
       <h1>Chess Timer</h1>
+    </div>
+
+    <div class="info-wrapper">
+      <h3>Player One goes first. Need to learn how to play? Click 
+        <a href="https://www.chess.com/learn-how-to-play-chess">here</a>!
+      </h3>
+      <img src="https://cdn3.iconfinder.com/data/icons/sport-2/100/sport_game-07-512.png">
     </div>
 
     <div class="board-wrapper">
