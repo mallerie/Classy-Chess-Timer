@@ -26,7 +26,7 @@ Firefox
 
 ### Deployment
 Feel free to deploy the timer using any tool you like. I have deployed it using surge.
-See the live site [here] (comfortable-owl.surge.sh).
+See the live site [here] (strome-shame.surge.sh).
 
 ### Built With
 
